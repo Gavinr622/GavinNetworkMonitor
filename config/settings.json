@@ -1,0 +1,15 @@
+{
+  "fullscreen": true,
+  "auto_save": true,
+  "dns_refresh_seconds": 60,
+  "default_protocol": "ALL",
+  "default_filter": "",
+  "command_directory": "E:\\CatWEb",
+  "loading_screen_enabled": true,
+  "loading_screen_seconds": 3.0,
+  "loading_title": "GAVIN",
+  "loading_subtitle": "NETWORK MONITOR",
+  "loading_bg": "#171a21",
+  "loading_accent": "#66c0f4",
+  "loading_spinner_interval": 80
+}

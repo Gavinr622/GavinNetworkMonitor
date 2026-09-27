@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gavin Network Monitor Docs</title>
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:"Segoe UI",Arial,sans-serif;background:#090d12;color:#eaf1f8;margin:0;line-height:1.6}
+.topbar{position:fixed;z-index:2000;inset:0 0 auto 0;height:64px;background:#0b1118;border-bottom:1px solid #243242;display:flex;align-items:center;padding:0 22px;box-shadow:0 3px 16px rgba(0,0,0,.35)}
+.brand{font-size:19px;font-weight:700;color:#66c0f4;white-space:nowrap}.version{margin-left:10px;color:#7f91a3;font-size:12px}.top-status{margin-left:auto;color:#91a4b7;font-size:12px}
+.layout{min-height:100vh;padding-top:64px}.sidebar{position:fixed;z-index:1500;left:0;top:64px;bottom:0;width:235px;background:#0d141c;border-right:1px solid #243242;padding:18px 12px;overflow-y:auto}.sidebar-title{font-size:11px;font-weight:700;color:#718499;letter-spacing:.08em;padding:8px 10px}.sidebar a{display:block;color:#b9c8d6;text-decoration:none;padding:9px 11px;border-radius:6px;margin:3px 0;font-size:14px}.sidebar a:hover,.sidebar a.active{background:#176eaf;color:#fff}
+.content{margin-left:235px;width:calc(100% - 235px);padding:34px 34px 70px}.card{width:min(980px,100%);margin:0 auto;background:#101720;padding:28px;border-radius:12px;border:1px solid #1d2b39;box-shadow:0 8px 25px rgba(0,0,0,.14)}h1,h2{color:#66c0f4}h1{margin-top:0;font-size:31px}h2{margin-top:34px}h3{color:#9ed8ff}code{background:#070a0e;padding:3px 6px;border-radius:4px;color:#dcecff}pre{background:#070a0e;border:1px solid #1d2b39;padding:14px;border-radius:8px;overflow:auto;color:#dcecff}.note{border-left:4px solid #66c0f4;padding:12px;background:#151e29}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.setting{margin:8px 0;padding:10px;background:#0c1219;border-radius:6px;border:1px solid #172431}.section{scroll-margin-top:80px}.small{color:#91a4b7;font-size:13px}ul,ol{padding-left:24px}.menu-btn{display:none}
+@media(max-width:750px){.top-status{display:none}.content{padding:24px 18px}.sidebar{width:205px}.content{margin-left:205px;width:calc(100% - 205px)}.brand{font-size:16px}}
+@media(max-width:560px){.topbar{position:sticky;top:0}.layout{padding-top:0}.sidebar{position:sticky;top:64px;width:100%;height:auto;max-height:45vh;border-right:0;border-bottom:1px solid #243242}.content{margin-left:0;width:100%;padding:20px}.card{padding:20px}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">Gavin Network Monitor <span class="version">Docs 7.3</span></div>
+  <div class="top-status">Built-in documentation</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+  <div class="sidebar-title">DOCUMENTATION</div>
+  <a href="#overview">🏠 Overview</a>
+  <a href="#side-menu">🧭 Side Menu</a>
+  <a href="#getting-started">🚀 Getting Started</a>
+  <a href="#admin">⌘ Admin Commands</a>
+  <a href="#settings">⚙ Settings</a>
+  <a href="#loading">🔄 Loading Screen</a>
+  <a href="#custom-loader">🎨 Custom Python Loader</a>
+  <a href="#documentation">📚 Documentation</a>
+  <a href="#folders">📁 Folders</a>
+  <a href="#customization">🛠 Customization</a>
+</aside>
+<main class="content">
+<div class="card">
+<section id="overview" class="section">
+<h1>Gavin Network Monitor 7.3</h1>
+<p>Built-in documentation for the network metadata monitor.</p>
+<div class="note"><b>Privacy:</b> the monitor is designed for traffic metadata visible to your own computer. It does not display packet payloads, passwords, or message contents.</div>
+</section>
+<section id="side-menu" class="section"><h2>Navigation / Side Menu</h2><p>The main app has a left-side navigation menu for <b>Live Traffic</b>, <b>Domain Matches</b>, <b>Packet Headers</b>, and <b>Command Console</b>. It also provides quick buttons for Documentation and Settings. The main app header stays separate above the navigation and content.</p></section>
+<section id="getting-started" class="section"><h2>Getting Started</h2><ol><li>Choose a capture interface.</li><li>Press <b>START</b>.</li><li>Use filters to inspect protocol, address, and port metadata.</li></ol></section>
+<section id="admin" class="section"><h2>Admin Command Center</h2><p>Use <code>Admin → Admin Command Center</code> after signing in. Custom commands and app shortcuts are stored in <code>config/</code>.</p></section>
+<section id="settings" class="section"><h2>Settings</h2><p>Settings are saved in <code>config/settings.json</code>.</p><div class="grid"><div class="setting"><h3>General</h3><p>Fullscreen, automatic saving, DNS refresh, default filters, and selected interface.</p></div><div class="setting"><h3>Loading Screen</h3><p>Startup splash, minimum duration, title, subtitle, colors, spinner interval, and the optional custom Python loader.</p></div></div></section>
+<section id="loading" class="section"><h2>Loading Screen</h2><p>The startup splash is shown before the main GUI. The main window stays hidden until startup is complete. The configured minimum duration is enforced at 3 seconds or longer.</p>
+<div class="setting"><b>Show loading screen</b> — enable or disable the startup splash.</div><div class="setting"><b>Minimum seconds</b> — minimum time the splash stays visible. Values below 3 are automatically raised to 3.</div><div class="setting"><b>Title / Subtitle</b> — text displayed on the splash.</div><div class="setting"><b>Background / Accent</b> — Tkinter color values such as <code>#171a21</code> and <code>#66c0f4</code>.</div><div class="setting"><b>Spinner interval</b> — animation update speed in milliseconds. Lower values animate faster.</div></section>
+<section id="custom-loader" class="section"><h2>Custom Python Loading Screen</h2><p>You can make your own Python startup theme without editing <code>app.py</code>. The included template is <code>config/custom_loading_screen.py</code>.</p><h3>Step 1 — Enable it</h3><p>Open <b>Admin → Admin Settings</b> or the sidebar <b>⚙ Settings</b>, enable <b>Enable custom Python loading screen plugin</b>, save, and restart.</p><h3>Step 2 — Edit the Python file</h3><p>Change these values:</p><pre>TITLE = "MY NETWORK TOOL"
+SUBTITLE = "STARTING..."
+BG = "#090d12"
+ACCENT = "#66c0f4"
+SPINNER_INTERVAL_MS = 80</pre><h3>Loading line format</h3><p>Each entry must be:</p><pre>(status text, detail text, percentage)</pre><p>Example:</p><pre>LOADING_LINES = [
+    ("Loading Npcap", "Checking interfaces", 70),
+    ("Ready", "Launching monitor", 100),
+]</pre><p>The custom file controls the splash title, subtitle, colors, spinner speed, and startup stream. If the custom loader contains an error, the application falls back to its built-in loader.</p></section>
+<section id="documentation" class="section"><h2>Documentation Button</h2><p>Use <b>Help → Documentation</b> or the sidebar <b>📚 Documentation</b> to view this bundled documentation inside the application. <b>Open HTML</b> opens the original file in your browser.</p></section>
+<section id="folders" class="section"><h2>Folders</h2><ul><li><code>cmd/</code> — admin command system</li><li><code>config/</code> — persistent settings, custom commands, apps, and the optional custom Python loader</li><li><code>docs/</code> — bundled documentation</li><li><code>loading_screen.py</code> — built-in loading-screen defaults</li></ul></section>
+<section id="customization" class="section"><h2>Customization</h2><p>Keep backups before editing configuration or Python files. Loading-screen settings are persisted in <code>config/settings.json</code>. The custom loader is optional and can be disabled from Admin Settings.</p></section>
+</div>
+</main>
+</div>
+</body>
+</html>

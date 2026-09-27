@@ -1,0 +1,24 @@
+GAVIN NETWORK MONITOR — DOWNLOAD HELPER
+
+IMPORTANT: A .txt file is documentation and cannot execute commands by itself.
+Use Download_GavinNetworkMonitor.bat to download and extract the latest published GitHub release.
+
+ONE-TIME SETUP
+1. Create your GitHub repository named GavinNetworkMonitor.
+2. Upload the project files and publish a GitHub Release containing a ZIP asset.
+3. Open Download_GavinNetworkMonitor.bat in Notepad.
+4. Replace YOUR_GITHUB_USERNAME with your actual GitHub username. Save the file.
+5. Double-click Download_GavinNetworkMonitor.bat. It downloads the latest ZIP release
+   and extracts it under your Downloads\GavinNetworkMonitor folder.
+6. Run Run_GavinNetworkMonitor.bat from the extracted project folder.
+
+COPY/PASTE RELEASE NOTES TEMPLATE
+Version: v7.3
+Release title: Gavin Network Monitor v7.3
+Release notes: Initial GitHub source release for v7.3. Includes live packet metadata
+monitoring, interface selection, filters, domain/IP watch list, header inspection,
+CSV export, in-app documentation, configurable loading screen, and guarded command console.
+
+Before publishing, verify the files and remove any personal data, packet captures,
+exported logs, credentials, or private network details. Install Python and Npcap as
+described in README.md.

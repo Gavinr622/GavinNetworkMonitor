@@ -1,0 +1,12 @@
+GAVIN NETWORK MONITOR — ADMIN LOGIN
+
+Version: 7.3
+
+Built-in application admin credentials:
+Username: admin
+Password: Admin
+
+IMPORTANT SECURITY NOTE
+These are hard-coded demo credentials in this source release. The admin prompt is only an application-level gate; it is NOT secure authentication and does not protect the app from someone who can inspect or modify its files. Do not use this as a security boundary or expose the application to untrusted users.
+
+For public GitHub distribution, consider changing the credentials in app.py before publishing, or removing the admin gate if it is not needed.
